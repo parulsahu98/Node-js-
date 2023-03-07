@@ -1,0 +1,10 @@
+import express from 'express'; 
+import { SaveTask,ViewTask, DeleteTask, UpdateTask ,Edit,FilterTask} from '../Controller/test.Contoller.js'; 
+const router  = express.Router(); 
+router.post('/Create', SaveTask);
+router.get('/', ViewTask);
+router.get('/Edit/:id', Edit);
+router.get('/Delete/:id', DeleteTask);
+router.post('/Update', UpdateTask);
+router.get('/Filter/:Level', FilterTask);
+export default router;
